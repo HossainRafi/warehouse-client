@@ -14,7 +14,7 @@ const Header = () => {
           Mobile Warehouse
         </h2>
       </div>
-      <div className="text-xl font-bold font-mono flex justify-center items-center gap-5">
+      <div className="text-xl font-bold font-mono flex justify-center items-center gap-4">
         <NavLink
           to="/"
           className={({ isActive }) =>

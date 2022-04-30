@@ -130,10 +130,10 @@ const Signup = () => {
         </form>
         <button onClick={handleGoogleLogin}>Sign Up with Google</button>
         <div>
-          <p className="font-medium text-lg text-center text-white mt-4">
-            Don't have an account ?
+          <p className="font-medium text-lg text-center text-blue-600 mt-4">
+            Have an account ?
           </p>
-          <p className="font-bold text-xl text-center text-blue-900">
+          <p className="font-bold text-xl text-center text-blue-700">
             <Link to="/login">Log In</Link>
           </p>
         </div>

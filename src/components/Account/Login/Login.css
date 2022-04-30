@@ -6,8 +6,7 @@
     border-radius: 15px;
     padding: 20px 40px;
     box-sizing: border-box;
-    background: #b5b8bb;
-    /* box-shadow: 10px 10px 15px #aeaeae, -14px -14px 20px #ffffff; */
+    background: #dddddd;
 }
 
 
@@ -17,7 +16,7 @@
     font-weight: 900;
     border-bottom: 5px solid #0c2162;
     font-size: 2.5rem;
-    color: #0c2162;
+    color: #4963b6;
     letter-spacing: 1px;
 }
 
@@ -56,7 +55,6 @@
     height: 40px;
     font-size: 18px;
     border-radius: 50px;
-    /* box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white; */
 }
 
 .login-container button {

@@ -104,19 +104,19 @@ const Login = () => {
         <button onClick={handleGoogleLogin}>Log In with Google</button>
 
         <div>
-          <p className="font-medium text-lg text-center text-white mt-4">
+          <p className="font-medium text-lg text-center text-blue-600 mt-4">
             Forget your password ?
           </p>
-          <p className="font-bold text-xl text-center text-blue-900 cursor-pointer">
+          <p className="font-bold text-xl text-center text-blue-700 cursor-pointer">
             <p onClick={handleResetPass}>Reset Password</p>
           </p>
         </div>
 
         <div>
-          <p className="font-medium text-lg text-center text-white mt-4">
+          <p className="font-medium text-lg text-center text-blue-600 mt-4">
             Don't have an account ?
           </p>
-          <p className="font-bold text-xl text-center text-blue-900">
+          <p className="font-bold text-xl text-center text-blue-700">
             <Link to="/signup">Sign Up</Link>
           </p>
         </div>
