@@ -2,9 +2,9 @@ import React from 'react';
 
 const ManageItem = () => {
     return (
-        <div>
-            
-        </div>
+      <div>
+        <h1 className="text-5xl text-center mt-10">manage item</h1>
+      </div>
     );
 };
 

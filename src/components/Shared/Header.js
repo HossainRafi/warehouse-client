@@ -10,9 +10,8 @@ const Header = () => {
   return (
     <div className="md:flex flex-row justify-between items-center bg-slate-300 md:h-[3.8rem] sticky top-0 z-50 px-10">
       <div className="flex flex-row justify-center items-center text-blue-500">
-        <i className="las la-camera-retro text-5xl font-extrabold"></i>
         <h2 className="font-serif  text-3xl font-bold italic">
-          Capture Freaks
+          Mobile Valley
         </h2>
       </div>
       <div className="text-xl font-bold font-mono flex justify-center items-center gap-5">
@@ -25,12 +24,28 @@ const Header = () => {
           Home
         </NavLink>
         <NavLink
-          to="/about"
+          to="/additem"
           className={({ isActive }) =>
             isActive ? "text-blue-600" : "text-slate-600 hover:text-blue-600"
           }
         >
-          About
+          Add Item
+        </NavLink>
+        <NavLink
+          to="/manageitem"
+          className={({ isActive }) =>
+            isActive ? "text-blue-600" : "text-slate-600 hover:text-blue-600"
+          }
+        >
+          Manage Item
+        </NavLink>
+        <NavLink
+          to="/myitem"
+          className={({ isActive }) =>
+            isActive ? "text-blue-600" : "text-slate-600 hover:text-blue-600"
+          }
+        >
+          My Item
         </NavLink>
         <NavLink
           to="/blogs"
