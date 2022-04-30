@@ -3,7 +3,7 @@ import Carousel from '../Carousel/Carousel';
 
 const Home = () => {
     return (
-        <div>
+        <div className='bg-gray-200'>
             <Carousel/>
         </div>
     );
