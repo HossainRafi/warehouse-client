@@ -95,7 +95,8 @@ const Signup = () => {
 
   const handleGoogleLogin = () => {
     signInWithGoogle();
-  };
+    };
+    
 
   return (
     <div className="bg-gray-200 py-10">

@@ -23,30 +23,41 @@ const Header = () => {
         >
           Home
         </NavLink>
-        <NavLink
-          to="/additem"
-          className={({ isActive }) =>
-            isActive ? "text-blue-600" : "text-slate-600 hover:text-blue-600"
-          }
-        >
-          Add Item
-        </NavLink>
-        <NavLink
-          to="/manageitem"
-          className={({ isActive }) =>
-            isActive ? "text-blue-600" : "text-slate-600 hover:text-blue-600"
-          }
-        >
-          Manage Item
-        </NavLink>
-        <NavLink
-          to="/myitem"
-          className={({ isActive }) =>
-            isActive ? "text-blue-600" : "text-slate-600 hover:text-blue-600"
-          }
-        >
-          My Item
-        </NavLink>
+
+        {user?.uid && (
+          <>
+            <NavLink
+              to="/additem"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-600"
+                  : "text-slate-600 hover:text-blue-600"
+              }
+            >
+              Add Item
+            </NavLink>
+            <NavLink
+              to="/manageitem"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-600"
+                  : "text-slate-600 hover:text-blue-600"
+              }
+            >
+              Manage Item
+            </NavLink>
+            <NavLink
+              to="/myitem"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-600"
+                  : "text-slate-600 hover:text-blue-600"
+              }
+            >
+              My Item
+            </NavLink>
+          </>
+        )}
         <NavLink
           to="/blogs"
           className={({ isActive }) =>
