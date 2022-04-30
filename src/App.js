@@ -17,15 +17,22 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/additem" element={<AddItem/>} />
-        <Route path="/manageitem" element={<ManageItem/>} />
-        <Route path="/myitem" element={<MyItem/>} />
+
+        <Route path="/additem" element={<AddItem />} />
+        
+        <Route path="/manageitem" element={<ManageItem />} />
+        
+        <Route path="/myitem" element={<MyItem />} />
+        
         <Route path="/blogs" element={<Blogs />} />
+
         <Route path="/login" element={<Login />} />
+
         <Route path="/signup" element={<Signup />} />
+        
         <Route path="*" element={<Error />} />
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

@@ -11,7 +11,7 @@ const Header = () => {
     <div className="md:flex flex-row justify-between items-center bg-slate-300 md:h-[3.8rem] sticky top-0 z-50 px-10">
       <div className="flex flex-row justify-center items-center text-blue-500">
         <h2 className="font-serif  text-3xl font-bold italic">
-          Mobile Valley
+          Mobile Warehouse
         </h2>
       </div>
       <div className="text-xl font-bold font-mono flex justify-center items-center gap-5">

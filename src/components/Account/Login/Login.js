@@ -35,7 +35,7 @@ const Login = () => {
   };
 
   const handlePasswordChange = (e) => {
-    const passwordRegex = /.{5,}/;
+    const passwordRegex = /.{6,}/;
     const validPassword = passwordRegex.test(e.target.value);
     if (validPassword) {
       setUserInfo({ ...userInfo, password: e.target.value });
