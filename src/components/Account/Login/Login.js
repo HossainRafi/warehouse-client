@@ -1,13 +1,17 @@
 import toast, { Toaster } from "react-hot-toast";
-import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
-import auth from './../../../Firebase/Firebase.init';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
-import  "./Login.css"
-import { ClipLoader } from "react-spinners";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import auth from "./../../../Firebase/Firebase.init";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import "./Login.css";
+import { ScaleLoader } from "react-spinners";
 
 const Login = () => {
   const [userInfo, setUserInfo] = useState({ email: "", password: "" });
@@ -35,7 +39,6 @@ const Login = () => {
     }
   };
 
-    
   const handlePasswordChange = (e) => {
     const passwordRegex = /.{6,}/;
     const validPassword = passwordRegex.test(e.target.value);
@@ -77,64 +80,62 @@ const Login = () => {
   const handleResetPass = () => {
     sendPasswordResetEmail(userInfo.email);
     toast.success("Mail Send");
-    };
-    if (loading || googleLoading || sending) {
-      return (
-        <p className="flex justify-center">
-          <ClipLoader color="red" size={100} />
-        </p>
-      );
-    }
+  };
 
-    return (
-      <div className="bg-gray-200 py-10">
-        
-        <div className="login-container">
-          <div className="login-title">Log In First</div>
-          <form onSubmit={handleLogin} className="login-form">
-            <input
-              onChange={handleEmailChange}
-              type="text"
-              placeholder="Enter Your Email"
-              required
-            />
-            {errors?.email && <p className="error-message">{errors.email}</p>}
-            <input
-              onChange={handlePasswordChange}
-              type="password"
-              placeholder="Enter Your Password"
-              required
-            />
-            {errors?.password && (
-              <p className="error-message">{errors.password}</p>
-            )}
-
-            <button>Log In</button>
-          </form>
-          <button onClick={handleGoogleLogin}>Log In with Google</button>
-
-          <div>
-            <p className="font-medium text-lg text-center text-blue-600 mt-4">
-              Forget your password ?
+  return (
+    <div className="bg-gray-200 py-10">
+      <div className="login-container">
+        <div className="login-title">Log In First</div>
+        <form onSubmit={handleLogin} className="login-form">
+          <input
+            onChange={handleEmailChange}
+            type="text"
+            placeholder="Enter Your Email"
+            required
+          />
+          {errors?.email && <p className="error-message">{errors.email}</p>}
+          <input
+            onChange={handlePasswordChange}
+            type="password"
+            placeholder="Enter Your Password"
+            required
+          />
+          {errors?.password && (
+            <p className="error-message">{errors.password}</p>
+                  )}
+                  
+          {(loading || googleLoading || sending) && (
+            <p className="flex justify-center">
+              <ScaleLoader color="blue" size={100} />
             </p>
-            <p className="font-bold text-xl text-center text-blue-700 cursor-pointer">
-              <p onClick={handleResetPass}>Reset Password</p>
-            </p>
-          </div>
+          )}
 
-          <div>
-            <p className="font-medium text-lg text-center text-blue-600 mt-4">
-              Don't have an account ?
-            </p>
-            <p className="font-bold text-xl text-center text-blue-700">
-              <Link to="/signup">Sign Up</Link>
-            </p>
-          </div>
+          <button>Log In</button>
+        </form>
+        <button onClick={handleGoogleLogin}>Log In with Google</button>
 
-          <Toaster position="top-center" reverseOrder={true} />
+        <div>
+          <p className="font-medium text-lg text-center text-blue-600 mt-4">
+            Forget your password ?
+          </p>
+          <p className="font-bold text-xl text-center text-blue-700 cursor-pointer">
+            <p onClick={handleResetPass}>Reset Password</p>
+          </p>
         </div>
+
+        <div>
+          <p className="font-medium text-lg text-center text-blue-600 mt-4">
+            Don't have an account ?
+          </p>
+          <p className="font-bold text-xl text-center text-blue-700">
+            <Link to="/signup">Sign Up</Link>
+          </p>
+        </div>
+
+        <Toaster position="top-center" reverseOrder={true} />
       </div>
-    );
+    </div>
+  );
 };
 
 export default Login;

@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import auth from './../../../Firebase/Firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useState } from 'react';
+import { ClipLoader, ScaleLoader } from 'react-spinners';
 
 const Signup = () => {
   const [userInfo, setUserInfo] = useState({
@@ -96,53 +97,56 @@ const Signup = () => {
   const handleGoogleLogin = () => {
     signInWithGoogle();
     };
-    
 
-  return (
-    <div className="bg-gray-200 py-10">
-      <div className="login-container">
-        <div className="login-title">Sign Up First</div>
-        <form className="login-form" onSubmit={handleLogin}>
-          <input
-            type="text"
-            placeholder="Your Email"
-            onChange={handleEmailChange}
-            required
-          />
-          {errors?.email && <p className="error-message">{errors.email}</p>}
-          <input
-            type={showPass ? "text" : "password"}
-            placeholder="password"
-            onChange={handlePasswordChange}
-            required
-          />
-          {errors?.password && (
-            <p className="error-message">{errors.password}</p>
-          )}
+      return (
+        <div className="bg-gray-200 py-10">
+          <div className="login-container">
+            <div className="login-title">Sign Up First</div>
+            <form className="login-form" onSubmit={handleLogin}>
+              <input
+                type="text"
+                placeholder="Your Email"
+                onChange={handleEmailChange}
+                required
+              />
+              {errors?.email && <p className="error-message">{errors.email}</p>}
+              <input
+                type={showPass ? "text" : "password"}
+                placeholder="password"
+                onChange={handlePasswordChange}
+                required
+              />
+              {errors?.password && (
+                <p className="error-message">{errors.password}</p>
+              )}
 
-          <input
-            type="password"
-            placeholder="confirm password"
-            onChange={handleConfirmPasswordChange}
-            required
-          />
+              <input
+                type="password"
+                placeholder="confirm password"
+                onChange={handleConfirmPasswordChange}
+                required
+              />
+              {(loading || googleLoading) && (
+                <p className="flex justify-center">
+                  <ScaleLoader color="blue" size={100} />
+                </p>
+              )}
+              <button>Sign Up</button>
+            </form>
+            <button onClick={handleGoogleLogin}>Sign Up with Google</button>
+            <div>
+              <p className="font-medium text-lg text-center text-blue-600 mt-4">
+                Have an account ?
+              </p>
+              <p className="font-bold text-xl text-center text-blue-700">
+                <Link to="/login">Log In</Link>
+              </p>
+            </div>
 
-          <button>Sign Up</button>
-        </form>
-        <button onClick={handleGoogleLogin}>Sign Up with Google</button>
-        <div>
-          <p className="font-medium text-lg text-center text-blue-600 mt-4">
-            Have an account ?
-          </p>
-          <p className="font-bold text-xl text-center text-blue-700">
-            <Link to="/login">Log In</Link>
-          </p>
+            <Toaster position="top-center" reverseOrder={true} />
+          </div>
         </div>
-
-        <Toaster position="top-center" reverseOrder={true} />
-      </div>
-    </div>
-  );
+      );
 };
 
 export default Signup;
