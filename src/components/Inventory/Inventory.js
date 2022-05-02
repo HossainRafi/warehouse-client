@@ -10,11 +10,11 @@ const Inventory = () => {
     useEffect(() => {
       fetch("fd.json")
         .then((res) => res.json())
-        .then((data) => setProducts(data));
+            .then((data) => setProducts(data));
     }, []);
     return (
       <div>
-        <h1 className="text-center text-3xl text-red-500 font-serif font-bold">
+        <h1 className="text-center text-3xl text-red-500 font-serif font-bold mt-20">
           INVENTORY
         </h1>
         <div className="grid md:grid-cols-3 gap-10 m-10">
@@ -25,7 +25,7 @@ const Inventory = () => {
         <div className="flex justify-center">
           <button
             onClick={() => navigate("/manageItem")}
-            className="rounded-xl bg-blue-500 text-white text-xl font-bold px-6 py-2"
+            className="rounded-xl bg-gray-500 text-white text-xl font-bold px-4 py-1 mb-10"
           >
             Manage Inventories
           </button>
