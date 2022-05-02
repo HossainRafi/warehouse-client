@@ -11,6 +11,7 @@ import Footer from "./components/Shared/Footer";
 import MyItem from "./components/MyItem/MyItem";
 import Header from "./components/Shared/Header";
 import RequireAuth from "./components/Account/RequireAuth/RequireAuth";
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
+      <Toaster position="top-center" reverseOrder={true} />
     </div>
   );
 }

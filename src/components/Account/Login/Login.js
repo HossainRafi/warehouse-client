@@ -1,4 +1,4 @@
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import auth from "./../../../Firebase/Firebase.init";
@@ -131,8 +131,6 @@ const Login = () => {
             <Link to="/signup">Sign Up</Link>
           </p>
         </div>
-
-        <Toaster position="top-center" reverseOrder={true} />
       </div>
     </div>
   );

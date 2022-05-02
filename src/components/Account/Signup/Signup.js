@@ -1,5 +1,5 @@
 import React from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -142,8 +142,6 @@ const Signup = () => {
                 <Link to="/login">Log In</Link>
               </p>
             </div>
-
-            <Toaster position="top-center" reverseOrder={true} />
           </div>
         </div>
       );
