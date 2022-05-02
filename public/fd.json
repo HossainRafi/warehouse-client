@@ -1,0 +1,122 @@
+[
+  {
+    "_id": 1,
+    "name": "GALAXY Z-FOLD III",
+    "price": "$1600",
+    "quantity": "20",
+    "supplier": "SAMSUNG",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/TPLgDh1/z-fold-3.jpg"
+  },
+  {
+    "_id": 2,
+    "name": "GALAXY NOTE-22 ULTRA",
+    "price": "$1200",
+    "quantity": "60",
+    "supplier": "SAMSUNG",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/TkQGDhc/note-22ultra.jpg"
+  },
+  {
+    "_id": 3,
+    "name": "GALAXY S-20FE",
+    "price": "$650",
+    "quantity": "55",
+    "supplier": "SAMSUNG",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/8BS6H5V/s20fe.jpg"
+  },
+  {
+    "_id": 4,
+    "name": "iPHONE 13",
+    "price": "$1100",
+    "quantity": "50",
+    "supplier": "APPLE",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/b5PKZ8w/iphone-13.jpg"
+  },
+  {
+    "_id": 5,
+    "name": "GOOGLE PIXEL 6",
+    "price": "$500",
+    "quantity": "45",
+    "supplier": "APPLE",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/C6xHZ6z/pixel-6.jpg"
+  },
+  {
+    "_id": 6,
+    "name": "ASUS ROG 5",
+    "price": "$1200",
+    "quantity": "40",
+    "supplier": "ASUS",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/X8Nc6HF/rog-5.jpg"
+  },
+  {
+    "_id": 7,
+    "name": "iPHONE X",
+    "price": "$900",
+    "quantity": "35",
+    "supplier": "APPLE",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/g919GYm/iphone-x.jpg"
+  },
+  {
+    "_id": 8,
+    "name": "ONEPLUS 8",
+    "price": "$550",
+    "quantity": "30",
+    "supplier": "ONEPLUS",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/f1rfDYS/oneplus-8.jpg"
+  },
+  {
+    "_id": 9,
+    "name": "iPHONE XR",
+    "price": "$500",
+    "quantity": "25",
+    "supplier": "APPLE",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/Mfk9MhD/iphone-xr.jpg"
+  },
+  {
+    "_id": 10,
+    "name": "GALAXY TAB S8",
+    "price": "$800",
+    "quantity": "20",
+    "supplier": "SAMSUNG",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/tK3ykFH/tab-s8.jpg"
+  },
+  {
+    "_id": 11,
+    "name": "HUAWEI MATE 40PRO",
+    "price": "$1300",
+    "quantity": "15",
+    "supplier": "HUAWEI",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/rkxkVQ0/mate-40pro.jpg"
+  },
+  {
+    "_id": 12,
+    "name": "REDMI NOTE 11",
+    "price": "$300",
+    "quantity": "10",
+    "supplier": "XIAOMI",
+    "desc": "",
+    "email":"hossainrafi23@gmail.com",
+    "img": "https://i.ibb.co/DVWPPYd/note-11.jpg"
+  }
+]
