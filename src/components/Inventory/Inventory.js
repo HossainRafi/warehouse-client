@@ -25,7 +25,7 @@ const Inventory = () => {
         <div className="flex justify-center">
           <button
             onClick={() => navigate("/manageItem")}
-            className="rounded-xl bg-gray-500 text-white text-xl font-bold px-4 py-1 mb-10"
+            className="rounded-2xl bg-blue-600 text-white text-xl font-bold px-4 py-1 mb-10"
           >
             Manage Inventories
           </button>
