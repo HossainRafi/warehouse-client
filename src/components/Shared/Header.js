@@ -2,19 +2,17 @@ import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink } from "react-router-dom";
-import auth from './../../Firebase/Firebase.init';
-
+import auth from "./../../Firebase/Firebase.init";
+import logo from "../../Utilities/logo.png";
 
 const Header = () => {
   const [user] = useAuthState(auth);
   return (
     <div className="md:flex flex-row justify-between items-center bg-slate-300 md:h-[3.8rem] sticky top-0 z-50 px-10">
-      <div className="flex flex-row justify-center items-center text-blue-500">
-        <h2 className="font-serif  text-3xl font-bold italic">
-          Mobile Warehouse
-        </h2>
+      <div>
+        <img src={logo} alt="" className="h-[140px] w-[150px]" />
       </div>
-      <div className="text-xl font-bold font-mono flex justify-center items-center gap-4">
+      <div className="text-xl font-semibold font-mono flex justify-center items-center gap-5">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -34,7 +32,7 @@ const Header = () => {
                   : "text-slate-600 hover:text-blue-600"
               }
             >
-              Add Item
+              AddItem
             </NavLink>
             <NavLink
               to="/manageitem"
@@ -44,7 +42,7 @@ const Header = () => {
                   : "text-slate-600 hover:text-blue-600"
               }
             >
-              Manage Item
+              ManageItem
             </NavLink>
             <NavLink
               to="/myitem"
@@ -54,7 +52,7 @@ const Header = () => {
                   : "text-slate-600 hover:text-blue-600"
               }
             >
-              My Item
+              MyItem
             </NavLink>
           </>
         )}

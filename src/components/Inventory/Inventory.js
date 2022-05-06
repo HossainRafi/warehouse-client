@@ -8,9 +8,9 @@ const Inventory = () => {
     const [products, setProducts] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-      fetch("fd.json")
+      fetch("https://pacific-scrubland-98119.herokuapp.com/mobiles")
         .then((res) => res.json())
-            .then((data) => setProducts(data));
+        .then((data) => setProducts(data));
     }, []);
     return (
       <div>
