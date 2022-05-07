@@ -16,8 +16,8 @@ const UpdateMobile = () => {
   const { name, price, quantity, supplier, desc, img } = mobile;
 
   const navigate = useNavigate();
-  const newQuantity = quantity;
   const handleDelivered = () => {
+    const newQuantity = quantity - 1;
     fetch(`https://pacific-scrubland-98119.herokuapp.com/mobile/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
@@ -30,9 +30,26 @@ const UpdateMobile = () => {
         }
       });
   };
+  const handleForm = (e) => {
+    e.preventDefault();
+    const addQuantity = e.target.quantity.value;
+    const newQuantity = quantity + +addQuantity;
+    fetch(`https://pacific-scrubland-98119.herokuapp.com/mobile/${id}`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ newQuantity }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount > 0) {
+          toast.success("Quantity Added Successfully", { id: "toastId" });
+          e.target.reset();
+        }
+      });
+  };
 
   return (
-    <div className="bg-gray-200">
+    <div>
       <div>
         <img src={img} alt="" />
       </div>
@@ -44,8 +61,8 @@ const UpdateMobile = () => {
         <p>{price}</p>
       </div>
       <div>
-        <button onClick={() => handleDelivered(id)}>Delivered</button>
-        <form>
+        <button onClick={handleDelivered}>Delivered</button>
+        <form onSubmit={handleForm}>
           <input type="number" name="quantity" placeholder="Add Quantity" />
           <input type="submit" value="Add" />
         </form>
