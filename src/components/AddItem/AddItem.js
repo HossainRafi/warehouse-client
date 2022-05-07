@@ -52,6 +52,7 @@ const AddItem = () => {
           name="email"
           value={user?.email}
           required
+          readOnly
           className="block py-1 pl-3 rounded-md text-lg bg-gray-200 border-2 m-4 w-9/12 mx-auto"
         />
         <input
