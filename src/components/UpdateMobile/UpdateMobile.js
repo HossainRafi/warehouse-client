@@ -49,7 +49,7 @@ const UpdateMobile = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <div>
         <img src={img} alt="" />
       </div>
