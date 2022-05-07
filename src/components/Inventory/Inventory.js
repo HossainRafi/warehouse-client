@@ -27,7 +27,7 @@ const Inventory = () => {
             onClick={() => navigate("/manageItem")}
             className="rounded-2xl bg-blue-600 text-white text-xl font-bold px-4 py-1 mb-10"
           >
-            Manage Inventories
+            Manage Item
           </button>
         </div>
       </div>

@@ -12,6 +12,8 @@ import MyItem from "./components/MyItem/MyItem";
 import Header from "./components/Shared/Header";
 import RequireAuth from "./components/Account/RequireAuth/RequireAuth";
 import { Toaster } from 'react-hot-toast';
+import UpdateMobile from "./components/UpdateMobile/UpdateMobile";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -46,7 +48,16 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route
+          path="/update/:id"
+          element={
+            <RequireAuth>
+              <UpdateMobile/>
+            </RequireAuth>
+          }
+        />
 
+        <Route path="/about" element={<About/>} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

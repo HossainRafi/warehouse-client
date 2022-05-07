@@ -32,7 +32,7 @@ const Header = () => {
                   : "text-slate-600 hover:text-blue-600"
               }
             >
-              AddItem
+              Add Item
             </NavLink>
             <NavLink
               to="/manageitem"
@@ -42,7 +42,7 @@ const Header = () => {
                   : "text-slate-600 hover:text-blue-600"
               }
             >
-              ManageItem
+              Manage Item
             </NavLink>
             <NavLink
               to="/myitem"
@@ -52,7 +52,7 @@ const Header = () => {
                   : "text-slate-600 hover:text-blue-600"
               }
             >
-              MyItem
+              My Item
             </NavLink>
           </>
         )}
@@ -63,6 +63,14 @@ const Header = () => {
           }
         >
           Blogs
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive ? "text-blue-600" : "text-slate-600 hover:text-blue-600"
+          }
+        >
+          About
         </NavLink>
 
         {user?.uid ? (
