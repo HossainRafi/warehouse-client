@@ -14,7 +14,7 @@ const AddItem = () => {
     const quantity = e.target.quantity.value;
     const price = e.target.price.value;
     const newProduct = { name, email, url, desc, supplier, quantity, price };
-    fetch(`http://localhost:5000/mobile`, {
+    fetch(`https://pacific-scrubland-98119.herokuapp.com/mobile`, {
       method: "POST",
       body: JSON.stringify({
         newProduct,

@@ -8,7 +8,7 @@ const UpdateMobile = () => {
   const { id } = useParams();
   const [mobile, setMobile] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/mobile/${id}`)
+    fetch(`https://pacific-scrubland-98119.herokuapp.com/mobile/${id}`)
       .then((res) => res.json())
       .then((data) => setMobile(data));
   }, [id, mobile]);

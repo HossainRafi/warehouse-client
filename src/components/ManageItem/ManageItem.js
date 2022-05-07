@@ -15,7 +15,7 @@ const ManageItem = () => {
   }, [products]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/mobile/${id}`, {
+    fetch(`https://pacific-scrubland-98119.herokuapp.com/mobile/${id}`, {
       method: "delete",
     })
       .then((res) => res.json())
