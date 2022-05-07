@@ -40,12 +40,16 @@ const Blogs = () => {
 
         <div className="bg-white rounded-xl p-5">
           <h2 className="text-xl font-serif font-bold text-red-600 mb-4">
-            The Purpose Of JWT & How JWT Works
+            Uses Of Node.js & MongoDB
           </h2>
           <p className="text-lg text-justify">
-            JWT(JSON web token ) is an open standard that defines a compact,
-            self-contained way to securely transmit information between parties
-            as a JSON object.
+            <span className="text-lg font-bold">Node.js: </span>
+            Node.js is a runtime environment for JavaScript. Node.js helps to
+            connect client site to database by it's server site. Node.js is used
+            in server side development
+            <span className="text-lg font-bold">MongoDB: </span>
+            MongoDB is a NoSQL database. We can store data in MongoDB. It
+            represents data as of JSON documents. It's used for store data. MongoDB gives us API to run our website.
           </p>
         </div>
       </div>
