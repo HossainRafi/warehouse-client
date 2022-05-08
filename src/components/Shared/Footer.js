@@ -43,10 +43,10 @@ const Footer = () => {
               </p>
             </div>
             <div className="mt-5">
-              <h1 className="text-center text-2xl font-serif font-bold mb-5">
-                Follow
+              <h1 className="text-center text-2xl font-serif font-bold mb-3">
+                Follow In Social
               </h1>
-              <div className="flex justify-center space-x-4 text-2xl text-blue-600">
+              <div className="flex justify-center space-x-3 text-2xl text-blue-700">
                 <p>
                   <TiSocialFacebook />
                 </p>
@@ -62,16 +62,10 @@ const Footer = () => {
                 <p>
                   <TiSocialLinkedin />
                 </p>
-                <p>
-                  <TiSocialVimeo />
-                </p>
-                <p>
-                  <FaGooglePlus />
-                </p>
               </div>
             </div>
           </div>
-          <p className="text-center py-3 font-serif text-xl font-bold">
+          <p className="text-center pt-4 pb-6 font-serif text-xl font-bold">
             Copyright &#169; 2022
           </p>
         </div>
