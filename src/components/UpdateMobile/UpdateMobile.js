@@ -68,7 +68,7 @@ const UpdateMobile = () => {
               <span className="text-red-600 font-bold">Sold Out</span>
             )}
           </p>
-          <p className="text-xl font-semibold font-sans">Price: {price}</p>
+          <p className="text-xl font-semibold font-sans">Price: ${price}</p>
         </div>
 
         <form onSubmit={handleForm} className="mt-8">

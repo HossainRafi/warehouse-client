@@ -87,7 +87,7 @@ const MyItem = () => {
                 )}
               </p>
               <p className="text-xl font-semibold font-sans">
-                Price: {mobile.price}
+                Price: ${mobile.price}
               </p>
             </div>
             <div className="flex justify-center py-5">

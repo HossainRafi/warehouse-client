@@ -8,12 +8,12 @@ const AddItem = () => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
-    const url = e.target.url.value;
+    const img = e.target.url.value;
     const desc = e.target.desc.value;
     const supplier = e.target.supplier.value;
     const quantity = e.target.quantity.value;
     const price = e.target.price.value;
-    const newProduct = { name, email, url, desc, supplier, quantity, price };
+    const newProduct = { name, email, img, desc, supplier, quantity, price };
     fetch(`https://pacific-scrubland-98119.herokuapp.com/mobile`, {
       method: "POST",
       body: JSON.stringify({

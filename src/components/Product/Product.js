@@ -26,7 +26,7 @@ const Product = ({ product,children }) => {
             <span className="text-red-600 font-bold">Sold Out</span>
           )}
         </p>
-        <p className="text-xl font-semibold font-sans">Price: {price}</p>
+        <p className="text-xl font-semibold font-sans">Price: ${price}</p>
         <div className="flex justify-between py-5">
           <button
             onClick={() => handleUpdate(_id)}

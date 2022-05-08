@@ -13,11 +13,18 @@ const Header = () => {
     <div className="shadow-md w-full sticky top-0 left-0 z-50">
       <div className="h-16 md:flex items-center justify-between bg-gray-300 py-4 md:px-10 px-7">
         <div>
-          <img src={logo} alt="" className="h-[140px] w-[150px]" />
+          <img
+            src={logo}
+            alt=""
+            className="h-[140px] w-[150px] hidden md:block"
+          />
+          <p className="md:hidden font-bold font-serif mt-1">
+            CELLPHONE WAREHOUSE
+          </p>
         </div>
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
+          className="text-3xl absolute right-8 top-4 cursor-pointer md:hidden"
         >
           <GiHamburgerMenu color="white" name={open ? "close" : "menu"} />
         </div>
@@ -26,7 +33,7 @@ const Header = () => {
             open ? "top-16 " : "top-[-490px]"
           }`}
         >
-          <div className="md:ml-8 text-xl md:my-0 my-7">
+          <div className="md:ml-4 text-lg md:my-0 my-7 font-serif font-bold">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -41,7 +48,7 @@ const Header = () => {
 
           {user?.uid && (
             <>
-              <div className="md:ml-8 text-xl md:my-0 my-7">
+              <div className="md:ml-4 text-lg md:my-0 my-7 font-serif font-bold">
                 <NavLink
                   to="/additem"
                   className={({ isActive }) =>
@@ -53,7 +60,7 @@ const Header = () => {
                   Add Item
                 </NavLink>
               </div>
-              <div className="md:ml-8 text-xl md:my-0 my-7">
+              <div className="md:ml-4 text-lg md:my-0 my-7 font-serif font-bold">
                 <NavLink
                   to="/manageitem"
                   className={({ isActive }) =>
@@ -65,7 +72,7 @@ const Header = () => {
                   Manage Item
                 </NavLink>
               </div>
-              <div className="md:ml-8 text-xl md:my-0 my-7">
+              <div className="md:ml-4 text-lg md:my-0 my-7 font-serif font-bold">
                 <NavLink
                   to="/myitem"
                   className={({ isActive }) =>
@@ -79,7 +86,7 @@ const Header = () => {
               </div>
             </>
           )}
-          <div className="md:ml-8 text-xl md:my-0 my-7">
+          <div className="md:ml-4 text-lg md:my-0 my-7 font-serif font-bold">
             <NavLink
               to="/blogs"
               className={({ isActive }) =>
@@ -91,7 +98,7 @@ const Header = () => {
               Blogs
             </NavLink>
           </div>
-          <div className="md:ml-8 text-xl md:my-0 my-7">
+          <div className="md:ml-4 text-lg md:my-0 my-7 font-serif font-bold">
             <NavLink
               to="/about"
               className={({ isActive }) =>
@@ -104,10 +111,10 @@ const Header = () => {
             </NavLink>
           </div>
 
-          <div className="md:ml-8 text-xl md:my-0 my-7">
+          <div className="md:ml-4 text-lg md:my-0 my-7 font-serif font-bold">
             {user?.uid ? (
               <button
-                className="text-slate-600 hover:text-blue-600 text-xl font-bold"
+                className="text-slate-600 hover:text-blue-600 text-lg font-bold"
                 onClick={() => signOut(auth)}
               >
                 LogOut
