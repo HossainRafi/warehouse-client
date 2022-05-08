@@ -26,7 +26,7 @@ const Footer = () => {
                   <ImLocation2 />
                 </span>
                 <span>
-                  Banglabazar,Dhaka,1210 <br /> Bangladesh
+                  Banglabazar,Dhaka,1210
                 </span>
               </p>
               <p className="flex items-center space-x-2">
