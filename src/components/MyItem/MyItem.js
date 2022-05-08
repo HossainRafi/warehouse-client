@@ -1,17 +1,39 @@
+import axios from "axios";
+import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 import auth from "./../../Firebase/Firebase.init";
+import { useNavigate } from 'react-router-dom';
 
 const MyItem = () => {
   const [user] = useAuthState(auth);
   const email = user?.email;
   const [mobiles, setMobiles] = useState([]);
+  const navigate=useNavigate()
   useEffect(() => {
-    fetch(`http://localhost:5000/items?email=${email}`)
-      .then((res) => res.json())
-      .then((data) => setMobiles(data));
+    // fetch(`http://localhost:5000/items?email=${email}`)
+    //   .then((res) => res.json())
+    //   .then((data) => setMobiles(data));
+
+    (async () => {
+      const url = `https://pacific-scrubland-98119.herokuapp.com/items?email=${email}`;
+      try {
+        const { data } = await axios.get(url, {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
+        setMobiles(data);
+      } catch (error) {
+        toast.error(error.message, { id: "error" });
+        if (error.response.status === 401 || error.response.status === 403) {
+          signOut(auth);
+          navigate("/login");
+        }
+      }
+    })();
   }, [email, mobiles]);
   
   const handleDelete = (id) => {

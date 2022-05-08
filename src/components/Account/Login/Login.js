@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import auth from "./../../../Firebase/Firebase.init";
 import {
+  useAuthState,
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
@@ -12,8 +13,12 @@ import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import "./Login.css";
 import { ScaleLoader } from "react-spinners";
+import axios from "axios";
+
 
 const Login = () => {
+  const [token, setToken] = useState("");
+
   const [userInfo, setUserInfo] = useState({ email: "", password: "" });
   const navigate = useNavigate();
   const location = useLocation();
@@ -22,6 +27,26 @@ const Login = () => {
 
   const [signInWithEmail, user, loading, hookError] =
     useSignInWithEmailAndPassword(auth, { sendEmailVerification: true });
+  
+  const [use]=useAuthState(auth)
+  const email = use?.email;
+  console.log(email);
+  useEffect(() => {
+    (async () => {
+      if (email) {
+        const { data } = await axios.post(
+          "https://pacific-scrubland-98119.herokuapp.com/login",
+          {
+            email,
+          }
+        );
+        console.log(data);
+        setToken(data.token);
+        localStorage.setItem("token", data.token);
+      }
+    })();
+  }, [email]);
+  console.log(token);
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
   const [sendPasswordResetEmail, sending, error] =
@@ -55,7 +80,7 @@ const Login = () => {
     e.preventDefault();
     signInWithEmail(userInfo.email, userInfo.password);
   };
-  if (user || googleUser) {
+  if (token) {
     navigate(from, { replace: true });
   }
   useEffect(() => {
@@ -63,11 +88,11 @@ const Login = () => {
     if (error) {
       switch (error?.code) {
         case "auth/invalid-email":
-          toast("OOPS..!! Something Went Wrong. Try Again Later");
+          toast("Your Email Is Invalid");
           break;
 
         case "auth/invalid-password":
-          toast("OOPS..!! Something Went Wrong. Try Again Later");
+          toast("Your Password Is Invalid");
           break;
         default:
           toast.error("OOPS..!! Something Went Wrong. Try Again Later");
@@ -81,6 +106,8 @@ const Login = () => {
     sendPasswordResetEmail(userInfo.email);
     toast.success("Mail Send");
   };
+
+  
 
   return (
     <div className="bg-gray-200 py-10">
@@ -102,8 +129,8 @@ const Login = () => {
           />
           {errors?.password && (
             <p className="error-message">{errors.password}</p>
-                  )}
-                  
+          )}
+
           {(loading || googleLoading || sending) && (
             <p className="flex justify-center">
               <ScaleLoader color="blue" size={100} />

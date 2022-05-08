@@ -2,7 +2,7 @@
   {
     "name": "GALAXY Z-FOLD III",
     "price": "$1600",
-    "quantity": "20",
+    "quantity": "5",
     "supplier": "SAMSUNG",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
@@ -11,7 +11,7 @@
   {
     "name": "GALAXY NOTE-22 ULTRA",
     "price": "$1200",
-    "quantity": "60",
+    "quantity": "5",
     "supplier": "SAMSUNG",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
@@ -20,7 +20,7 @@
   {
     "name": "GALAXY S-20FE",
     "price": "$650",
-    "quantity": "55",
+    "quantity": "5",
     "supplier": "SAMSUNG",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
@@ -29,7 +29,7 @@
   {
     "name": "iPHONE 13",
     "price": "$1100",
-    "quantity": "50",
+    "quantity": "5",
     "supplier": "APPLE",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
@@ -38,7 +38,7 @@
   {
     "name": "GOOGLE PIXEL 6",
     "price": "$500",
-    "quantity": "45",
+    "quantity": "5",
     "supplier": "APPLE",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
@@ -47,7 +47,7 @@
   {
     "name": "ASUS ROG 5",
     "price": "$1200",
-    "quantity": "40",
+    "quantity": "5",
     "supplier": "ASUS",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
@@ -56,7 +56,7 @@
   {
     "name": "iPHONE X",
     "price": "$900",
-    "quantity": "35",
+    "quantity": "5",
     "supplier": "APPLE",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
@@ -65,7 +65,7 @@
   {
     "name": "ONEPLUS 8",
     "price": "$550",
-    "quantity": "30",
+    "quantity": "3",
     "supplier": "ONEPLUS",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
@@ -74,7 +74,7 @@
   {
     "name": "iPHONE XR",
     "price": "$500",
-    "quantity": "25",
+    "quantity": "5",
     "supplier": "APPLE",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
@@ -83,7 +83,7 @@
   {
     "name": "GALAXY TAB S8",
     "price": "$800",
-    "quantity": "20",
+    "quantity": "5",
     "supplier": "SAMSUNG",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
@@ -92,7 +92,7 @@
   {
     "name": "HUAWEI MATE 40PRO",
     "price": "$1300",
-    "quantity": "15",
+    "quantity": "5",
     "supplier": "HUAWEI",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
@@ -101,7 +101,7 @@
   {
     "name": "REDMI NOTE 11",
     "price": "$300",
-    "quantity": "10",
+    "quantity": "5",
     "supplier": "XIAOMI",
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus sint doloremque iusto odio, reprehenderit voluptatem asperiores est a alias.",
     "email":"hossainrafi23@gmail.com",
