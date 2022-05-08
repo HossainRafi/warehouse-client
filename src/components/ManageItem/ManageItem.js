@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Product from "./../Product/Product";
 import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const ManageItem = () => {
   const [products, setProducts] = useState([]);
@@ -15,13 +16,25 @@ const ManageItem = () => {
   }, [products]);
 
   const handleDelete = (id) => {
-    fetch(`https://pacific-scrubland-98119.herokuapp.com/mobile/${id}`, {
-      method: "delete",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        toast.success("Successfully Deleted", { id: "toastId" });
-      });
+    Swal.fire({
+      title: "Are You Sure To Delete?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`https://pacific-scrubland-98119.herokuapp.com/mobile/${id}`, {
+          method: "delete",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            Swal.fire("Deleted!", "Your file has been deleted.", "success");
+          });
+      }
+    });
   };
   return (
     <div className="bg-gray-200">

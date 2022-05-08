@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 import auth from "./../../Firebase/Firebase.init";
 
 const MyItem = () => {
@@ -14,18 +15,35 @@ const MyItem = () => {
   }, [email, mobiles]);
   
   const handleDelete = (id) => {
-    fetch(`https://pacific-scrubland-98119.herokuapp.com/mobile/${id}`, {
-      method: "delete",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        toast.success("Successfully Deleted", { id: "toastId" });
-      });
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`https://pacific-scrubland-98119.herokuapp.com/mobile/${id}`, {
+          method: "delete",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            Swal.fire("Deleted!", "Your file has been deleted.", "success");
+          });
+      }
+    });
+      
   };
   return (
     <div className="bg-gray-200">
       <h2 className="text-5xl font-serif text-center pt-2 text-sky-600">
-        You Added <span className="text-8xl font-bold text-red-500 px-2">{mobiles.length}</span> Item
+        You Added{" "}
+        <span className="text-8xl font-bold text-red-500 px-2">
+          {mobiles.length}
+        </span>{" "}
+        Item
       </h2>
       <div className="grid md:grid-cols-3 gap-10 pt-7 pb-14 px-12">
         {mobiles.map((mobile) => (
@@ -43,7 +61,12 @@ const MyItem = () => {
                 Supplier: {mobile.supplier}
               </p>
               <p className="text-lg font-semibold pb-1">
-                Quantity: {mobile.quantity}
+                Quantity:{" "}
+                {mobile.quantity ? (
+                  mobile.quantity
+                ) : (
+                  <span className="text-red-600 font-bold">Sold Out</span>
+                )}
               </p>
               <p className="text-xl font-semibold font-sans">
                 Price: {mobile.price}
