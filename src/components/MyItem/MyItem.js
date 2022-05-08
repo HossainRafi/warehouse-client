@@ -13,10 +13,6 @@ const MyItem = () => {
   const [mobiles, setMobiles] = useState([]);
   const navigate=useNavigate()
   useEffect(() => {
-    // fetch(`http://localhost:5000/items?email=${email}`)
-    //   .then((res) => res.json())
-    //   .then((data) => setMobiles(data));
-
     (async () => {
       const url = `https://pacific-scrubland-98119.herokuapp.com/items?email=${email}`;
       try {
