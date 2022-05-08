@@ -10,7 +10,7 @@ const Product = ({ product,children }) => {
   return (
     <div className="bg-white rounded-xl">
       <div>
-        <img className="h-[250px] w-10/12 mx-auto py-3" src={img} alt="" />
+        <img className="h-[250px] w-10/12 mx-auto pb-3 pt-5" src={img} alt="" />
       </div>
       <div className="px-5">
         <p className="text-xl font-bold pb-3">{name}</p>

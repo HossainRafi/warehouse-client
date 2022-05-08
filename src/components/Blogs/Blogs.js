@@ -47,9 +47,10 @@ const Blogs = () => {
             Node.js is a runtime environment for JavaScript. Node.js helps to
             connect client site to database by it's server site. Node.js is used
             in server side development
-            <span className="text-lg font-bold">MongoDB: </span>
+            <span className="text-lg font-bold block mt-3">MongoDB: </span>
             MongoDB is a NoSQL database. We can store data in MongoDB. It
-            represents data as of JSON documents. It's used for store data. MongoDB gives us API to run our website.
+            represents data as of JSON documents. It's used for store data.
+            MongoDB gives us API to run our website.
           </p>
         </div>
       </div>
