@@ -11,8 +11,8 @@ const MyItem = () => {
     fetch(`http://localhost:5000/items?email=${email}`)
       .then((res) => res.json())
       .then((data) => setMobiles(data));
-  }, [email]);
-
+  }, [email, mobiles]);
+  
   const handleDelete = (id) => {
     fetch(`https://pacific-scrubland-98119.herokuapp.com/mobile/${id}`, {
       method: "delete",
